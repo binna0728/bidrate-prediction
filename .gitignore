@@ -26,7 +26,7 @@ MANIFEST
 
 # Jupyter Notebook
 .ipynb_checkpoints
-*.ipynb
+*.ipynb_checkpoints/
 
 # Data files (엑셀 파일은 제외)
 *.csv
