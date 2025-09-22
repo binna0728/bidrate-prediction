@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(conda install:*)",
+      "Bash(conda:*)",
+      "Bash(\"d:\\predict_model\\.conda\\python.exe\" -m ipykernel install --user --name predict_model --display-name \"Python (predict_model)\")",
+      "Bash(findstr:*)",
+      "Bash(\"d:\\predict_model\\.conda\\python.exe\" -m pip install scikit-learn)",
+      "mcp__ide__executeCode",
+      "Bash(jupyter:*)",
+      "Bash(\"d:\\predict_model\\.conda\\python.exe\" -c \"import sklearn; print(''scikit-learn version:'', sklearn.__version__)\")",
+      "Bash(dir)",
+      "Bash(rm:*)",
+      "Bash(dir:*)",
+      "Bash(python:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
