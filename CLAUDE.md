@@ -125,8 +125,80 @@ pd.read_excel('파일명.xlsx', encoding='utf-8')
 - [x] Linear Regression 모델
 - [x] XGBoost 모델
 - [x] Streamlit 웹앱
+- [x] GitHub 저장소 생성 및 push 완료
 - [ ] 딥러닝 모델 최적화
 - [ ] 배포
+
+## WSL Ubuntu 작업 환경 설정
+
+### 1. 저장소 클론
+```bash
+git clone https://github.com/binna0728/bidrate-prediction.git
+cd bidrate-prediction
+```
+
+### 2. Python 환경 설정
+```bash
+# Python3 및 pip 설치 확인
+python3 --version
+sudo apt update
+sudo apt install python3-pip python3-venv -y
+
+# 가상환경 생성 및 활성화
+python3 -m venv venv
+source venv/bin/activate
+```
+
+### 3. 패키지 설치
+```bash
+# pip 업그레이드
+pip install --upgrade pip
+
+# 필요 패키지 설치
+pip install -r requirements.txt
+```
+
+### 4. 모델 학습 실행
+```bash
+# 모델 학습
+python train_model.py
+
+# Streamlit 앱 실행 (포트: 8501)
+streamlit run app.py
+```
+
+### 5. Jupyter Notebook 실행
+```bash
+# Jupyter 실행
+jupyter notebook --no-browser --port=8888
+
+# 브라우저에서 접속: http://localhost:8888
+```
+
+## Windows와 WSL 간 작업
+
+### Windows에서 작업한 내용을 WSL로 가져오기
+```bash
+# WSL에서
+cd ~/bidrate-prediction
+git pull origin main
+```
+
+### WSL에서 작업한 내용을 Windows로 보내기
+```bash
+# WSL에서
+git add .
+git commit -m "Update from WSL"
+git push origin main
+
+# Windows에서
+git pull origin main
+```
+
+## 주의사항
+- WSL과 Windows 간 줄바꿈 문자 차이 (LF vs CRLF)
+- 경로 구분자 차이 (/ vs \)
+- 파일 권한 차이
 
 ## 라이선스
 Private Project
